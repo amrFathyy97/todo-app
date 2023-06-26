@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(55, 55, 55) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-flow: column;
+  align-items: center;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  width: 100%;
+  transition: 0.5s;
+  position: relative;
+}
+
+.input .input-submit {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #443e57;
+  color: rgb(172, 168, 168);
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  right: 12px;
+  top: 11.5px;
+}
+
+.input .input-submit:hover {
+  background-color: #443e57;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.todos {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: white;
+  background-color: #cfbeff;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.todos .todo-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #443e57;
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.todos .todo-list .todo-title {
+  margin-left: 20px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+}
+
+.action svg {
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.action svg:hover {
+  transform: scale(1.2);
+  color: #cfbeff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.twice {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: baseline;
+}
+
+.twice h1 {
+  height: fit-content;
+}
+
+.completed-task {
+  background-color: #dfd5fd;
+}
+
+.todo-list:hover {
+  transform: scale(1.04);
 }
